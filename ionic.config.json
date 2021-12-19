@@ -1,0 +1,8 @@
+{
+  "name": "pet-goals",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "78d99621"
+}
