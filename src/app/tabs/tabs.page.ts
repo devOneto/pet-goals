@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor() { }
+
+  tabs = [
+    { name: "Ranking", route: "ranking", iconPath: "../../assets/icon/ranking.svg" },
+    { name: "Home", route: "feed", iconPath: "../../assets/icon/home.svg" },
+    { name: "Perfil", route: "profile", iconPath: "../../assets/icon/profile.svg" }
+  ];
 
 }

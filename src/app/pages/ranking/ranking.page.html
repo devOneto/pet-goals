@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<ion-content>
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- 2o -->
+      <div class="col mt-3 align-center text-center">
+        <span>2o</span>
+        <img class="w-100 h-60 anothers" src="../../../assets/icon/profile.svg">
+        <span class="podium-name">João Batista</span> <br>
+        <span class="podium-points"> 258 </span>
+      </div>
+      <!-- 1o -->
+      <div class="col mt-3 align-center text-center">
+        <span>1o</span>
+        <img class="w-100 h-80" src="../../../assets/icon/profile.svg">
+        <span class="podium-name">Letíciaaa</span> <br>
+        <span class="podium-points"> 309 </span>
+      </div>
+      <!-- 3o -->
+      <div class="col mt-3 align-center text-center">
+        <span>3o</span>
+        <img class="w-100 h-60 anothers" src="../../../assets/icon/profile.svg">
+        <span class="podium-name">Caaaaiu</span> <br>
+        <span class="podium-points"> 202 </span>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div *ngFor="let i of [1,2,3,4,5,6]" class="row pt-4">
+        <div class="col-1 p-0 text-center align-middle">
+          <span class="location align-center">4o</span>
+        </div>
+        <div class="col">
+          <div class="colocation-card px-3" style="background-color: linear ;">
+            <img class="commom-guys my-3 mx-2" src="../../../assets/icon/profile.svg">
+            <span> Cara Aleatório 1 </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</ion-content>

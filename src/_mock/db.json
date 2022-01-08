@@ -1,0 +1,103 @@
+{
+    "posts": [
+        {
+            "id": 0,
+            "title": "Doacao de Racao",
+            "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+            "date": "11/12/2021",
+            "description": "Doacao de Racao para os cães do abrigo são Lázaro",
+            "likes": 10,
+            "organization": {
+                "id": 0,
+                "name": "Abrigo São Làzaro"
+            }
+        },
+        {
+            "id": 0,
+            "title": "Doacao de Racao",
+            "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+            "date": "11/12/2021",
+            "description": "Doacao de Racao para os cães do abrigo são Lázaro",
+            "likes": 10,
+            "organization": {
+                "id": 0,
+                "name": "Abrigo São Làzaro"
+            }
+        },
+        {
+            "id": 0,
+            "title": "Doacao de Racao",
+            "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+            "date": "11/12/2021",
+            "description": "Doacao de Racao para os cães do abrigo são Lázaro",
+            "likes": 10,
+            "organization": {
+                "id": 0,
+                "name": "Abrigo São Làzaro"
+            }
+        },
+        {
+            "id": 0,
+            "title": "Doacao de Racao",
+            "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+            "date": "11/12/2021",
+            "description": "Doacao de Racao para os cães do abrigo são Lázaro",
+            "likes": 10,
+            "organization": {
+                "id": 0,
+                "name": "Abrigo São Làzaro"
+            }
+        }
+    ],
+    "ranking": {
+        "users": [
+            {
+                "id": 0,
+                "name": "Leticia",
+                "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+                "points": 10
+            },
+            {
+                "id": 0,
+                "name": "Caio",
+                "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+                "points": 9
+            },
+            {
+                "id": 0,
+                "name": "Luis",
+                "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+                "points": 8
+            }
+        ]
+    },
+    "profile": {
+        "id": 0,
+        "name": "Caio",
+        "points": 10,
+        "events": [
+            {
+                "id": 0,
+                "ParticipatorName": "Caio",
+                "post": {
+                    "id": 0,
+                    "title": "Doacao de Racao",
+                    "urlImage": "https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png",
+                    "date": "11/12/2021",
+                    "description": "Doacao de Racao para os cães do abrigo são Lázaro",
+                    "likes": 10,
+                    "organization": {
+                        "id": 0,
+                        "name": "Abrigo São Làzaro"
+                    }
+                }
+            }
+        ],
+        "badges": [
+            {
+                "id": 0,
+                "imageUrl": "encurtador.com.br/xBCKV"
+            }
+        ]
+    }
+}
