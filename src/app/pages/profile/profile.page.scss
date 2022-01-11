@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 .card-profile{
     height: 140px;
@@ -82,4 +83,60 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container-presenca{
+    margin: 30px;
+}
+
+.titulo-presenca{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-presenca h2{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.titulo-presenca img{
+    height: 20px;
+    margin-right: 10px;
+    color: #666666;
+}
+
+.card-evento{
+    margin:0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-evento img{
+    height: 60px;
+    margin-right: 10px;
+}
+
+.card-evento h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #021638;
+    margin:0;
+}
+
+.card-evento p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #021638;
+    opacity: 0.6;
+    margin:0;
+}
+
+.card-evento a{
+    margin-left: auto
 }
