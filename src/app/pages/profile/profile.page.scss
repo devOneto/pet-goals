@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+.card-profile{
+    height: 140px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-profile{
+    object-fit: contain;
+    height:100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.container-nome{
+    display:flex;
+    align-items: center;
+}
+
+.container-nome h1{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FC8721;
+    font-size: 20px;
+}
+
+.container-nome img{
+    margin: 0 0 0 5px;
+    width:30px;
+}
+
+.pontuacao{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #666666;
+    font-size: 22px;
+}
