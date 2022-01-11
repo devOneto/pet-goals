@@ -11,6 +11,10 @@
                 "id": 0,
                 "name": "Abrigo São Làzaro",
                 "urlImage": "https://i.pinimg.com/originals/31/7e/a1/317ea17b97a9ab4b476194c79a32e228.jpg"
+            },
+            "actions": {
+              "like": true,
+              "share": false
             }
         },
         {
@@ -24,6 +28,10 @@
                 "id": 1,
                 "name": "Animais UFC",
                 "urlImage": "https://i.pinimg.com/736x/ec/2d/f8/ec2df81e57f875b86bc698c180385203.jpg"
+            },
+            "actions": {
+              "like": false,
+              "share": true
             }
         },
         {
@@ -37,6 +45,10 @@
                 "id": 2,
                 "name": "SAAU",
                 "urlImage": "https://storage.alboom.ninja/sites/24882/media/cantinho_da_filo_-_logo_5e822c1259fa.jpg?t=1598151354"
+            },
+            "actions": {
+              "like": true,
+              "share": true
             }
         },
         {
@@ -50,6 +62,10 @@
                 "id": 0,
                 "name": "Abrigo São Làzaro",
                 "urlImage": "https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2014%2F09%2F06%2F18%2FWDL-Logo-45246_406_064209975_1677574514.jpg"
+            },
+            "actions": {
+              "like": true,
+              "share": true
             }
         }
     ],
@@ -95,7 +111,7 @@
     },
     "profile": {
         "id": 0,
-        "name": "Caio",
+        "name": "Caio Orleans",
         "points": 10,
         "events": [
             {
@@ -116,10 +132,58 @@
             }
         ],
         "badges": [
-            {
-                "id": 0,
-                "imageUrl": "encurtador.com.br/xBCKV"
-            }
+          {
+              "id": 0,
+              "imageUrl": "https://drive.google.com/uc?id=1OAYaJ9ALh0B66_Qmgyozl1KVA5D4x6Oz"
+          },
+          {
+            "id": 1,
+            "imageUrl": "https://drive.google.com/uc?id=1CS_q5YtWrsHDkBEn9Hiat_B1NPJQe8l5"
+          },
+          {
+            "id": 2,
+            "imageUrl": "https://drive.google.com/uc?id=1dwHAAi2MRKM4PRv1deSush1uuDmk_hkh"
+          }
         ]
+    },
+    "conquests": [
+      {
+        "id": 0,
+        "code": "AGUIA",
+        "description": "Conquista para ganhar a Bagde Aguia referente a seguir 3 perfis",
+        "unlocked": true,
+        "message": null,
+        "imageUrl": "https://drive.google.com/uc?id=1dwHAAi2MRKM4PRv1deSush1uuDmk_hkh"
+      },
+      {
+        "id": 1,
+        "code": "ROOKIE",
+        "description": "Conquista para ganhar a Bagde Rookie referente a se cadastrar no app",
+        "unlocked": false,
+        "message": "Parabéns! Você acaba de criar seu acesso no Pet Goals e esperamos contar com você daqui para frente!",
+        "imageUrl": "https://drive.google.com/uc?id=1OAYaJ9ALh0B66_Qmgyozl1KVA5D4x6Oz"
+      },
+      {
+        "id": 2,
+        "code": "CURTIDOR",
+        "description": "Conquista para ganhar a Bagde Curtidor referente a curtir 20 postagens",
+        "unlocked": true,
+        "message": "Opa! Parece que alguém gosta de interação por aqui. Muito bem, super apoiamos isso!",
+        "imageUrl": "https://drive.google.com/uc?id=1CS_q5YtWrsHDkBEn9Hiat_B1NPJQe8l5"
+      }
+    ],
+    "action": {
+      "type": "LIKE",
+      "postId": 0,
+      "userId": 0,
+      "organizationId": 0
+    },
+    "singUp": {
+      "status": "APPROVED",
+      "userId": 0,
+      "name": "Caio"
+    },
+    "singIn": {
+      "token": "5/f3N1ie6TGKH3+HAkjAqFsYJuuvBaH2/EdukgT7NPk="
     }
 }
