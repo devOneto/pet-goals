@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
 
 .card-profile{
     height: 140px;
@@ -42,4 +42,44 @@
     font-weight: 600;
     color: #666666;
     font-size: 22px;
+}
+
+.titulo-badges{
+    display: flex;
+    align-items: center;
+}
+
+.container-badges{
+    margin: 30px;
+}
+
+.titulo-badges h2{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.titulo-badges img{
+    height: 20px;
+    margin-right: 10px;
+    color: #666666;
+}
+
+.badges{
+    display:flex;
+    margin-top: 20px;
+    width:1000px
+}
+
+.card-badge{
+    margin-right: 15px;
+    width:100px;
+    height:100px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
