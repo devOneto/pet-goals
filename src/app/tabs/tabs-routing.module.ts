@@ -18,6 +18,10 @@ const routes: Routes = [
       {
         path: 'feed',
         loadChildren: () => import('../pages/feed/feed.module').then(m => m.FeedPageModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../pages/login/login.module').then(m => m.LoginPageModule)
       }
     ]
   },
