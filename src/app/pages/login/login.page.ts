@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  preencheuCampos: boolean = false;
+  
   constructor() { }
 
   ngOnInit() {
+  }
+
+  verificaPreenchimento()
+  {
+    
   }
 
 }
