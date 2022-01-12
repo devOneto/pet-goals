@@ -1,0 +1,83 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    height: 100vh;
+}
+
+.formLogin {
+    width: 100%;
+    padding: 15px;
+}
+
+.backgroundContainer {
+    top: 0;
+    background: #F4F4F4;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.logoTitle {
+    font-weight: 700;
+    color: #FC8721;
+}
+
+.inputContainer {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.formInput {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #646464;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.4rem;
+    transition: border-color .15s ease-in-out;
+}
+
+.buttonLoginPrimary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 1.438rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(252,135,33,1) 0%, rgba(255,198,54,1) 100%);
+    line-height: 24px;
+}
+
+.buttonLoginSecondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid #FC8721; 
+    border-radius: 1.438rem;
+    background: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FC8721;
+    line-height: 24px;
+    padding: 0.9rem;
+}
+
+.orContainer {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #AEAEAE;
+}
+
+.divider {
+    width: 134px;
+    height: 3px;
+    background: #E0E0E0;
+}
