@@ -1,3 +1,5 @@
+import { ProfileService } from './../../services/profile.service';
+import { Profile } from './../../models/profile.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  profile: Profile = null;
+
+  constructor(private profileService: ProfileService
+    ) { }
 
   ngOnInit() {
+    this.profileService.getProfile().toPromise()
+    .then(data => { this.profile = data });
   }
 
 }
