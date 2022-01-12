@@ -1,45 +1,72 @@
 <app-header></app-header>
 
-<ion-content>
-    <div class="container">
-        <div class="card-profile">
-            <img class="img-profile" src="{{profile.urlImage}}" alt="">
-            <div>
-                <div class="container-nome">
-                    <h1>{{profile.name}}</h1>
-                    <img src="../../../assets/badges/pata-dourada.svg" alt="">
-                </div>
-                <p class="pontuacao">{{profile.points}} pontos</p>
-            </div>
+<!-- TODO: Mensagem de erro para caso não consiga recuperar os dados do usuário -->
+<ion-content *ngIf="this.profile">
+  <div class="container">
+    <div class="card-profile">
+      <img class="img-profile" src="https://i.pinimg.com/564x/bb/09/3b/bb093bd57d42959664b2c24e81d38964.jpg" alt="">
+      <div>
+        <div class="container-nome">
+          <h1>{{profile.name}}</h1>
+          <img src="../../../assets/badges/pata-dourada.svg" alt="">
         </div>
+        <p class="pontuacao">{{profile.points * 21}} pontos</p>
+      </div>
     </div>
-    <div class="container-badges">
-        <div class="titulo-badges">
-            <img src="../../../assets/icon/star-badge.svg" alt="">
-            <h2>Coleção de badges</h2>
-        </div>
-        <div class="badges">
-          <div *ngFor="let badge of profile.badges">
-            <div class="card-badge col-md-3">
-              <img src="{{badge.imageUrl}}" alt="">
-            </div>
-          </div>
-        </div>
+  </div>
+  <div class="container-badges">
+    <div class="titulo-badges">
+      <img src="../../../assets/icon/star-badge.svg" alt="">
+      <h2>Coleção de badges</h2>
     </div>
-    <div class="container-presenca">
-        <div class="titulo-presenca">
-            <img src="../../../assets/icon/calendar.svg" alt="">
-            <h2>Marcou presença em</h2>
+    <div class="badges">
+      <!-- TODO: Deixar Badges Dinâmicas de Acordo com o Back-->
+      <!-- <div *ngFor="let badge of profile.badges">
+        <div class="card-badge col-md-3">
+          <img src="{{badge.imageUrl}}" alt="">
         </div>
-        <div *ngFor="let event of profile.events">
-          <div class="card-evento">
-            <img src="../../../assets/icon/evento-icon.svg" alt="">
-            <div>
-                <h3>{{event.post.title}}</h3>
-                <p>{{event.post.description}}</p>
-            </div>
-            <a href="">Ver</a>
-          </div>
-        </div>
+      </div> -->
+
+      <div class="card-badge col-md-3">
+        <img src="../../../assets/badges/rookie.svg" alt="">
+      </div>
+
+      <div class="card-badge col-md-3">
+        <img src="../../../assets/badges/eagle.svg" alt="">
+      </div>
+
+      <div class="card-badge col-md-3">
+        <img src="../../../assets/badges/liker.svg" alt="">
+      </div>
+
+      <br>
+
     </div>
+
+    <div class="badges">
+      <div class="card-badge col-md-3">
+        <img src="../../../assets/badges/bronze-paw.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- TODO: Teremos Presença Marcada? -->
+  <!-- <div class="container-presenca">
+    <div class="titulo-presenca">
+      <img src="../../../assets/icon/calendar.svg" alt="">
+      <h2>Marcou presença em</h2>
+    </div>
+    <div *ngFor="let event of profile.events">
+      <div class="card-evento">
+        <img src="../../../assets/icon/evento-icon.svg" alt="">
+        <div>
+          <h3>{{event.post.title}}</h3>
+          <p>{{event.post.description}}</p>
+        </div>
+        <a href="">Ver</a>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- TODO: Sair da Aplicação -->
+
 </ion-content>
