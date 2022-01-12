@@ -3,13 +3,13 @@
 <ion-content>
     <div class="container">
         <div class="card-profile">
-            <img class="img-profile" src="../../../assets/icon/profile.svg" alt="">
+            <img class="img-profile" src="{{profile.urlImage}}" alt="">
             <div>
                 <div class="container-nome">
-                    <h1>Jonahtan</h1>
+                    <h1>{{profile.name}}</h1>
                     <img src="../../../assets/badges/pata-dourada.svg" alt="">
                 </div>
-                <p class="pontuacao">100 pontos</p>
+                <p class="pontuacao">{{profile.points}} pontos</p>
             </div>
         </div>
     </div>
@@ -19,9 +19,11 @@
             <h2>Coleção de badges</h2>
         </div>
         <div class="badges">
-            <div class="card-badge">
-                <img src="../../../assets/badges/rookie.svg" alt="">
+          <div *ngFor="let badge of profile.badges">
+            <div class="card-badge col-md-3">
+              <img src="{{badge.imageUrl}}" alt="">
             </div>
+          </div>
         </div>
     </div>
     <div class="container-presenca">
@@ -29,13 +31,15 @@
             <img src="../../../assets/icon/calendar.svg" alt="">
             <h2>Marcou presença em</h2>
         </div>
-        <div class="card-evento">
+        <div *ngFor="let event of profile.events">
+          <div class="card-evento">
             <img src="../../../assets/icon/evento-icon.svg" alt="">
             <div>
-                <h3>Evento</h3>
-                <p>Descrição do evento</p>
+                <h3>{{event.post.title}}</h3>
+                <p>{{event.post.description}}</p>
             </div>
             <a href="">Ver</a>
+          </div>
         </div>
     </div>
 </ion-content>
