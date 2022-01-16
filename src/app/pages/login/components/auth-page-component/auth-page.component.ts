@@ -11,23 +11,29 @@ export class AuthPage implements OnInit {
 
   login: string = ``;
   password: string = ``;
+  storage: Storage;
+  showErrorMessage: boolean = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+    this.storage = window.sessionStorage;
+  }
 
   ngOnInit() {
+    this.storage.clear()
   }
 
   loginUser() {
+    this.showErrorMessage = false;
     this.authService.authUser(this.login, this.password)
       .toPromise()
       .then(data => {
-        console.log(data + this.login + this.password)
         let user: any = data;
         if (this.login == user.email && this.password == user.password) {
-          console.log('e igual sim')
+          this.storage.setItem('authenticated', JSON.stringify(true));
           this.router.navigateByUrl('tabs/feed');
-        }
+        } else { this.showErrorMessage = true }
       })
+      .catch(console.log)
   }
 
 }

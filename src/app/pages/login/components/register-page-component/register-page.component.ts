@@ -11,18 +11,23 @@ export class RegisterPage implements OnInit {
 
   newUserEmail: string;
   newUserPassword: string;
+  showSuccessMessage: boolean;
+  storage: Storage;
 
-  constructor(private _authService: AuthService, private router: Router) { }
+  constructor(private _authService: AuthService, private router: Router) {
+    this.storage = window.sessionStorage;
+  }
 
   ngOnInit() {
+    this.storage.clear()
   }
 
   newUser() {
     this._authService.newAccount(this.newUserEmail, this.newUserPassword)
       .toPromise()
       .then(x => {
-        console.log(`cadastrou`)
-        this.router.navigate(['']);
+        this.showSuccessMessage = true;
+        // this.router.navigate(['']);
       })
   }
 

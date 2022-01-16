@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content *ngIf="!showSuccessMessage">
   <div class="loginContainer">
     <form class="formLogin">
       <div class="text-center mb-4">
@@ -16,9 +16,9 @@
           placeholder="Senha*" required>
       </div>
 
-      <div class="inputContainer">
+      <!-- <div class="inputContainer">
         <input type="password" id="inputPassword" class="formInput" placeholder="Confirmar Senha*" required>
-      </div>
+      </div> -->
 
       <div class="mt-4 mb-5">
         <button class="buttonLoginPrimary" type="submit" (click)="newUser()">Cadastrar</button>
@@ -46,4 +46,37 @@
 
     </form>
   </div>
+</ion-content>
+
+<ion-content *ngIf="showSuccessMessage">
+  <!-- TODO: Sucesso de Registro: Concertar o layout -->
+  <div class="loginContainer">
+    <div class="backgroundContainer h-75">
+      <div class="d-flex justify-content-center mt-5 mb-5">
+        <img src="../../../assets/success.svg" alt>
+      </div>
+
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col">
+            <h2 class="titleSuccess">Cadastro realizado!</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="paragraphSuccess">
+              Seja bem vindo a plataforma que conecta pessoas e projetos!
+              Esperamos que você se sinta em casa e possa contribuir da melhor forma possível.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttonContainer">
+      <button class="buttonLoginSecondary" routerLink="">Voltar a tela de Login</button>
+    </div>
+
+  </div>
+
 </ion-content>
