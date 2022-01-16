@@ -16,11 +16,13 @@
           placeholder="Senha" required>
       </div>
 
-      <!-- TODO: Esqueceu a Senha -->
-      <!-- COLOCAR UM MODAL INFORMANDO QUE É NECESSÁRIO FALAR COM OS ADMS DO SISTEMA -->
-      <!-- <div class="passwordForgot">
-        <span>Esqueceu a senha?</span>
-      </div> -->
+      <div class="passwordForgot">
+        <span (click)="showForgotPassword()">Esqueceu a senha?</span>
+      </div>
+      <span class="error" *ngIf="showForgotPasswordAdvise">
+        Gentileza entrar em contato com os administradores do sistema pelo email:
+        Suporte@PetGoals.com
+      </span>
 
       <div class="mb-5">
         <button class="buttonLoginPrimary" type="submit" (click)="loginUser()">Entrar</button>

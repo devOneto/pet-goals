@@ -13,6 +13,7 @@ export class AuthPage implements OnInit {
   password: string = ``;
   storage: Storage;
   showErrorMessage: boolean = false;
+  showForgotPasswordAdvise: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {
     this.storage = window.sessionStorage;
@@ -34,6 +35,11 @@ export class AuthPage implements OnInit {
         } else { this.showErrorMessage = true }
       })
       .catch(console.log)
+  }
+
+  showForgotPassword() {
+    console.log(this.showForgotPasswordAdvise)
+    this.showForgotPasswordAdvise = !this.showForgotPasswordAdvise;
   }
 
 }
