@@ -7,11 +7,13 @@
       </div>
 
       <div class="inputContainer">
-        <input type="email" id="inputEmail" class="formInput" placeholder="Email" required autofocus>
+        <input type="email" id="inputEmail" [(ngModel)]="login" name="login" class="formInput" placeholder="Email"
+          required autofocus>
       </div>
 
       <div class="inputContainer">
-        <input type="password" id="inputPassword" class="formInput" placeholder="Senha" required>
+        <input type="password" id="inputPassword" [(ngModel)]="password" name="password" class="formInput"
+          placeholder="Senha" required>
       </div>
 
       <!-- TODO: Esqueceu a Senha -->
@@ -20,7 +22,7 @@
       </div> -->
 
       <div class="mb-5">
-        <button class="buttonLoginPrimary" type="submit" [routerLink]="'../feed'">Entrar</button>
+        <button class="buttonLoginPrimary" type="submit" (click)="loginUser()">Entrar</button>
       </div>
 
       <div class="container">
@@ -38,7 +40,6 @@
 
         <div class="row no-gutters">
           <div class="col no-gutters mt-4">
-            <!-- TODO: Fazer Cadrastro -->
             <button class="buttonLoginSecondary" routerLink="register">Fazer Cadastro</button>
           </div>
         </div>

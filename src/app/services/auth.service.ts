@@ -11,6 +11,10 @@ export class AuthService {
 
   url: string = `${environment.url}/singUp`
 
+  authUser(email: string, password: string) {
+    return this._http.get(`${this.url}`)
+  }
+
   newAccount(email: string, password: string) {
     let body = {
       email: email,
