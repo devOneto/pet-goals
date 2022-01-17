@@ -1,6 +1,7 @@
+import { Post } from './../../models/post.model';
 import { Component, OnInit } from '@angular/core';
-import { Post } from 'src/app/models/post.model';
 import { FeedService } from 'src/app/services/feed.service';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-feed',
@@ -19,6 +20,15 @@ export class FeedPage implements OnInit {
     this.feedService.getFeed()
       .toPromise()
       .then(data => { this.posts = data })
+  }
+
+  sharePost(post: Post) {
+    Share.share({
+      title: post.title,
+      text: post.description,
+      url: post.urlImage,
+      dialogTitle: 'Compartilhar um post do Pet Goals!',
+    });
   }
 
 }
