@@ -40,6 +40,7 @@ export class FeedPage implements OnInit {
 
     const { role } = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
+  }
 
   sharePost(post: Post) {
     Share.share({
