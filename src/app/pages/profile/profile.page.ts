@@ -12,11 +12,11 @@ export class ProfilePage implements OnInit {
   profile: Profile = null;
 
   constructor(private profileService: ProfileService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.profileService.getProfile().toPromise()
-    .then(data => { this.profile = data });
+      .then(data => { console.log(data); this.profile = data });
   }
 
 }

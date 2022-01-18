@@ -80,6 +80,12 @@
     padding: 0.9rem;
 }
 
+.disabled{
+    border: 2px solid #ccc !important; 
+    color: #ccc !important;
+    cursor: none;
+}
+
 .orContainer {
     font-size: 1.5rem;
     font-weight: 400;

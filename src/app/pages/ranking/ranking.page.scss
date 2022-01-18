@@ -21,9 +21,21 @@
 }
 
 .commom-guys{
-    min-height: 40px;
+    width:70px;
+    height:60px;
+    border-radius: 50%;
 }
 
 .location{
     font: 16px bold;
+}
+
+.border{
+    border-radius: 50%;
+}
+
+.winners{
+    border-radius: 50%;
+    width: 200px;
+    height: 100px;
 }

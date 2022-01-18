@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RankingUser } from 'src/app/models/rankingUser.model';
+import { RankingService } from 'src/app/services/ranking.service';
 
 @Component({
   selector: 'app-ranking',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RankingPage implements OnInit {
 
-  constructor() { }
+  ranking: RankingUser[] = [];
+
+  constructor(private rankingService: RankingService) { }
 
   ngOnInit() {
+    this.rankingService.getRanking().toPromise()
+      .then(data => { this.ranking = data.users })
+      .catch(console.log)
   }
 
 }
