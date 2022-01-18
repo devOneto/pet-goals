@@ -12,7 +12,7 @@ import { takeUntil, filter } from 'rxjs/operators';
 export class TabsPage implements OnInit {
 
   closed$ = new Subject<any>();
-  showTabs = true;
+  storage: Storage;
 
   tabs = [
     { name: "Ranking", route: "ranking", iconPath: "../../assets/icon/ranking.svg" },
@@ -20,17 +20,11 @@ export class TabsPage implements OnInit {
     { name: "Perfil", route: "profile", iconPath: "../../assets/icon/profile.svg" }
   ];
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router) {
+    this.storage = window.sessionStorage;
+  }
 
   ngOnInit(): void {
-    this._router.events.pipe(
-      filter(e => e instanceof NavigationEnd),
-      takeUntil(this.closed$)
-    ).subscribe(event => {
-      if (event['url'] == '/tabs/login') {
-        this.showTabs = false; // <-- hide tabs on specific pages
-      }
-    });
   }
 
   ngOnDestroy() {

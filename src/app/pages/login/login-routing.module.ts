@@ -11,8 +11,7 @@ const routes: Routes = [
     component: LoginPage,
     children: [
       { path: '', component: AuthPage },
-      // TODO: Rota de Registro de novas contas
-      // { path: '/register', component: RegisterPage }
+      { path: 'register', component: RegisterPage },
     ]
   },
 
