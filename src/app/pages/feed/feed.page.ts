@@ -43,11 +43,18 @@ export class FeedPage implements OnInit {
   }
 
   sharePost(post: Post) {
+    let titlePost: string = post.title;
+    let description: string = post.description;
+    if (post.event != null) {
+      titlePost = post.title + '! No dia ' + post.event.date + ' as ' + post.event.time + '! Responsável: ' + post.event.responsible;
+      description = post.description + ' no dia ' + post.event.date + ' as ' + post.event.time + '! Responsável: ' + post.event.responsible;
+    }
+
     Share.share({
-      title: post.title,
-      text: post.description,
+      title: titlePost,
+      text: description,
       url: post.urlImage,
-      dialogTitle: 'Compartilhar um post do Pet Goals!',
+      dialogTitle: titlePost,
     });
 
   }
