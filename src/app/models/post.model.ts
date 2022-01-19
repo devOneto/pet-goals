@@ -1,3 +1,4 @@
+import { Event } from "./event.model";
 import { Organization } from "./organization.model";
 
 export interface Post {
@@ -7,5 +8,6 @@ export interface Post {
     date: Date,
     description: string,
     likes: number,
-    organization: Organization
+    organization: Organization,
+    event: Event
 }
