@@ -27,7 +27,14 @@
       <div class="row">
         <div class="col">
           <!-- TODO: Alterar cor da paw quando der like para indicar que já deu like daaah -->
-          <img class="mx-2" src="../../../assets/icon/paw.svg" (click)="incrementLike(post)">
+          <div *ngIf="!post.actions.like;else other_content">
+            <img class="mx-2" src="../../../assets/icon/paw.svg" (click)="incrementLike(post)">
+          </div>
+
+          <ng-template #other_content>
+            <img class="mx-2" src="../../../assets/icon/svgviewer-output.svg">
+          </ng-template>
+
           <span class="">{{post.likes}}</span>
         </div>
         <div class="col d-flex justify-content-end">

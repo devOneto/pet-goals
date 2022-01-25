@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { FeedService } from 'src/app/services/feed.service';
 import { Share } from '@capacitor/share';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -15,7 +16,8 @@ export class FeedPage implements OnInit {
 
   constructor(
     private feedService: FeedService,
-    public alertController: AlertController
+    public alertController: AlertController,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,8 +26,20 @@ export class FeedPage implements OnInit {
       .then(data => { this.posts = data })
   }
 
-  incrementLike(post) {
-    post.likes++;
+  incrementLike(post: Post) {
+    if (!post.actions.like) {
+      post.likes++;
+      post.actions.like = true;
+
+      const foundIndex = this.posts.findIndex(x => x.id === post.id);
+      this.posts[foundIndex] = post;
+
+      this.feedService.postFeed(post)
+      .toPromise()
+      .then(data => { this.posts = data })
+
+      this.changeLocation();
+    }
   }
 
   async presentAlert() {
@@ -58,5 +72,15 @@ export class FeedPage implements OnInit {
     });
 
   }
+
+  changeLocation(): void {
+
+    // save current route first
+    const currentRoute = this.router.url;
+
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        this.router.navigate([currentRoute]); // navigate to same route
+    });
+}
 
 }

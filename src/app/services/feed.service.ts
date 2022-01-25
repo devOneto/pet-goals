@@ -17,4 +17,10 @@ export class FeedService {
     return this._http.get<Post[]>(`${this.url}`)
   }
 
+  postFeed(post: Post): Observable<Post[]> {
+    console.log(post);
+
+    return this._http.put<Post[]>(`${this.url}/${post.id}`, post);
+  }
+
 }
