@@ -1,3 +1,4 @@
+import { Action } from "./action.model";
 import { Event } from "./event.model";
 import { Organization } from "./organization.model";
 
@@ -9,5 +10,6 @@ export interface Post {
     description: string,
     likes: number,
     organization: Organization,
-    event: Event
+    event: Event,
+    actions: Action
 }
