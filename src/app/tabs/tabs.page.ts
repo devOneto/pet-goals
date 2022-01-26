@@ -25,10 +25,16 @@ export class TabsPage implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.storage.getItem('userType'));
   }
 
   ngOnDestroy() {
     this.closed$.next(); // <-- close subscription when component is destroyed
+  }
+
+  showTab() {
+    console.log(this.storage.getItem('authenticated') == 'true' && this.storage.getItem('userType') == 'common')
+    return (this.storage.getItem('authenticated') == 'true' && this.storage.getItem('userType') == '"common"')
   }
 
 }
