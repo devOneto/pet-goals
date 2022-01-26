@@ -9,16 +9,22 @@ export class AuthService {
 
   constructor(private _http: HttpClient) { }
 
-  url: string = `${environment.url}/singUp`
+  url: string = `${environment.url}/profile`
 
   authUser(email: string, password: string) {
     return this._http.get(`${this.url}`)
   }
 
-  newAccount(email: string, password: string) {
+  newAccount(email: string, password: string, name: string) {
     let body = {
+      name: name,
       email: email,
-      password: password
+      password: password,
+      urlImage: "",
+      points: 0,
+      events: [],
+      badges: [],
+      isFirstLogin: true
     }
     return this._http.post(`${this.url}`, body);
   }

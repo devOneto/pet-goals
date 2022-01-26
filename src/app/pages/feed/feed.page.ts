@@ -4,6 +4,7 @@ import { AlertController } from '@ionic/angular';
 import { FeedService } from 'src/app/services/feed.service';
 import { Share } from '@capacitor/share';
 import { Router } from '@angular/router';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-feed',
@@ -13,10 +14,12 @@ import { Router } from '@angular/router';
 export class FeedPage implements OnInit {
 
   posts: Post[] = [];
+  showModalFirstAcess: boolean = false;
 
   constructor(
     private feedService: FeedService,
     public alertController: AlertController,
+    private profileService: ProfileService,
     private router: Router
   ) { }
 
@@ -24,6 +27,12 @@ export class FeedPage implements OnInit {
     this.feedService.getFeed()
       .toPromise()
       .then(data => { this.posts = data })
+
+    this.profileService.getProfile()
+      .toPromise()
+      .then(data => { this.showModalFirstAcess = data.isFirstLogin });
+
+    this.profileService.updateFirstLoginStatus()
   }
 
   incrementLike(post: Post) {
@@ -35,8 +44,8 @@ export class FeedPage implements OnInit {
       this.posts[foundIndex] = post;
 
       this.feedService.postFeed(post)
-      .toPromise()
-      .then(data => { this.posts = data })
+        .toPromise()
+        .then(data => { this.posts = data })
 
       this.changeLocation();
     }
@@ -79,8 +88,13 @@ export class FeedPage implements OnInit {
     const currentRoute = this.router.url;
 
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-        this.router.navigate([currentRoute]); // navigate to same route
+      this.router.navigate([currentRoute]); // navigate to same route
     });
-}
+  }
+
+  closeCardFirstAccess() {
+    this.showModalFirstAcess = false;
+    this.profileService.updateFirstLoginStatus()
+  }
 
 }

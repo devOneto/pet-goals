@@ -17,4 +17,15 @@ export class ProfileService {
     return this._http.get<Profile>(`${this.url}`);
   }
 
+  updateFirstLoginStatus() {
+    console.log(`a`)
+    return this._http.get(`${this.url}`)
+      .toPromise()
+      .then(data => {
+        let body: any = data;
+        body.isFirstLogin = false;
+        this._http.post(`${this.url}`, body).toPromise().then(console.log)
+      })
+  }
+
 }

@@ -1,10 +1,10 @@
 <app-header></app-header>
 
-<!-- TODO: Mensagem de erro para caso não consiga recuperar os dados do usuário -->
 <ion-content *ngIf="this.profile">
   <div class="container">
     <div class="card-profile">
-      <img class="img-profile" src="https://i.pinimg.com/564x/bb/09/3b/bb093bd57d42959664b2c24e81d38964.jpg" alt="">
+      <img class="img-profile"
+        src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1" alt="">
       <div>
         <div class="container-nome">
           <h1>{{profile.name}}</h1>
@@ -27,7 +27,11 @@
         </div>
       </div> -->
 
-      <div class="card-badge col-md-3">
+      <div *ngIf="profile.badges.length <= 0">
+        <span>Você ainda não possui nenhuma badge. :(</span>
+      </div>
+
+      <!-- <div class="card-badge col-md-3">
         <img src="../../../assets/badges/rookie.svg" alt="">
       </div>
 
@@ -37,17 +41,12 @@
 
       <div class="card-badge col-md-3">
         <img src="../../../assets/badges/liker.svg" alt="">
-      </div>
+      </div> -->
 
       <br>
 
     </div>
 
-    <div class="badges">
-      <div class="card-badge col-md-3">
-        <img src="../../../assets/badges/bronze-paw.svg" alt="">
-      </div>
-    </div>
   </div>
 
 </ion-content>
