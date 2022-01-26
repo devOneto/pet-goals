@@ -22,6 +22,10 @@ const routes: Routes = [
       {
         path: 'login',
         loadChildren: () => import('../pages/login/login.module').then(m => m.LoginPageModule)
+      },
+      {
+        path: 'shelter',
+        loadChildren: () => import('../pages/shelter/shelter.module').then(m => m.ShelterPageModule)
       }
     ]
   },
