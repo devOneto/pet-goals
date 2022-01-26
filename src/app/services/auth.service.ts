@@ -16,6 +16,9 @@ export class AuthService {
   }
 
   newAccount(email: string, password: string, name: string) {
+
+    let firstBadge = { name: 'Rookie', description: 'Seu primeiro prêmio. Por fazer parte da família PetGoals! Obrigado!', image: 'rookie' }
+
     let body = {
       name: name,
       email: email,
@@ -23,7 +26,7 @@ export class AuthService {
       urlImage: "",
       points: 0,
       events: [],
-      badges: [],
+      badges: [firstBadge],
       isFirstLogin: true
     }
     return this._http.post(`${this.url}`, body);
