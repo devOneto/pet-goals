@@ -31,4 +31,8 @@ export class TabsPage implements OnInit {
     this.closed$.next(); // <-- close subscription when component is destroyed
   }
 
+  showTab() {
+    return (this.storage.getItem('authenticated') == 'true' && this.storage.getItem('userType') == '"common"')
+  }
+
 }

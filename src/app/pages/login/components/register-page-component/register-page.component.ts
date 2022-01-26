@@ -12,6 +12,7 @@ export class RegisterPage implements OnInit {
   newUserEmail: string;
   newUserPassword: string;
   showSuccessMessage: boolean;
+  newUserName: string;
   storage: Storage;
 
   constructor(private _authService: AuthService, private router: Router) {
@@ -23,7 +24,7 @@ export class RegisterPage implements OnInit {
   }
 
   newUser() {
-    this._authService.newAccount(this.newUserEmail, this.newUserPassword)
+    this._authService.newAccount(this.newUserEmail, this.newUserPassword, this.newUserName)
       .toPromise()
       .then(x => {
         this.showSuccessMessage = true;

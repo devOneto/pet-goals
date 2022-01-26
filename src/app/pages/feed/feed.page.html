@@ -7,12 +7,37 @@
     <div cklass="flex-item" style="flex-grow: 1"> Seguindo </div>
   </div> -->
 
+  <ion-card class="py-1" *ngIf="showModalFirstAcess">
+    <ion-card-content>
+
+      <div class="row d-flex justify-content-end ">
+        <span (click)="closeCardFirstAccess()">X</span>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+        <div class="card-badge col-4 mb-3">
+          <img src="../../../assets/badges/rookie.svg" alt="">
+        </div>
+
+        <span style="font-size: 16px;">
+          Parabéns! Você acaba de criar seu
+          acesso no <strong style="color: #FC8721;"> Pet Goals </strong>
+          e esperamos contar com você daqui para
+          frente!
+        </span>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
   <ion-card *ngFor="let post of posts" class="pb-3" style="border-radius: 10px;">
 
     <ion-card-header class="card-header" style="background-color: #F4F4F4;">
-      <img class="profile-icon d-inline mr-5 d-inline"
-        src="https://i.pinimg.com/564x/1d/3e/b9/1d3eb9f70bb9768090fc31e15a261fd4.jpg" width="40px" height="40px">
-      <span class="d-inline organization-name">{{post.organization.name}}</span>
+      <div (click)="goToShelterProfile()">
+        <img class="profile-icon d-inline mr-5 d-inline"
+          src="https://i.pinimg.com/564x/1d/3e/b9/1d3eb9f70bb9768090fc31e15a261fd4.jpg" width="40px" height="40px">
+        <span class="d-inline organization-name">{{post.organization.name}}</span>
+      </div>
     </ion-card-header>
 
     <div class="img-block">
@@ -20,6 +45,11 @@
     </div>
 
     <ion-card-content>
+      <h1 class="p-0 m-0 mb-1">
+        <strong>
+          {{post.title}}
+        </strong>
+      </h1>
       {{post.description}}
     </ion-card-content>
 

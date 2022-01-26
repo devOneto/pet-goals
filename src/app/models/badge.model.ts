@@ -1,4 +1,6 @@
 export interface Badge {
   id: number,
-  imageUrl: string
+  name: string,
+  image: string,
+  description: string
 }

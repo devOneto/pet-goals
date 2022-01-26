@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<ion-content *ngIf="this.profile">
+<ion-content>
 
   <div class="container">
 
@@ -12,43 +12,38 @@
             src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1"
             alt="">
           <div>
-            <div class="container-nome">
-              <h1>{{profile.name}}</h1>
-              <img src="../../../assets/badges/pata-dourada.svg" alt="">
-            </div>
-            <p class="pontuacao">{{profile.points * 21}} pontos</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- TITULO COLECAO DE BADGES! -->
+    <!-- TITULO COLECAO POSTS! -->
     <div class="row d-flex" style="margin: 20px 20px 0 20px;">
       <div class="col-2 d-flex justify-content-center">
         <img src="../../../assets/icon/star-badge.svg">
       </div>
       <div class="col d-flex justify-content-start">
-        <h4 class="p-0 m-0">Coleção de badges</h4>
+        <h4 class="p-0 m-0">Seus Posts</h4>
       </div>
     </div>
 
-    <div class="row card-badge" *ngIf="profile.badges.length <= 0" style="margin: 20px 20px 0 20px;">
-      <span>Você ainda não possui nenhuma badge. :(</span>
-    </div>
+    <!-- <div class="row card-badge" *ngIf="shelters.posts.length <= 0" style="margin: 20px 20px 0 20px;">
+      <span>Você ainda não possui nenhum post</span>
+    </div> -->
 
-    <!-- BADGES -->
-    <div class="row card-badge vertical-align-center" *ngFor="let badge of profile.badges"
+    <!-- POSTS -->
+    <!-- <div class="row card-badge vertical-align-center" *ngFor="let post of shelter.posts"
       style="margin: 20px 20px 0 20px; min-height: 100px;">
 
       <div class="col-4 mt-2 p-2 align-center">
-        <img src="../../../assets/badges/{{badge.image}}.svg"> <br>
+        <img src="../../../assets/badges/{{post.image}}.svg"> <br>
       </div>
 
       <div class="col p-2 vertical-align-center">
-        <p class="mt-3"> {{badge.description}} </p>
+        <p class="mt-3"> {{post.description}} </p>
       </div>
 
-    </div>
+    </div> -->
 
 
   </div>

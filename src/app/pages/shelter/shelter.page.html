@@ -1,0 +1,174 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-start">
+          <ion-title>Appet!</ion-title>
+        </div>
+        <div class="col d-flex justify-content-end" (click)="exit()">x</div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!isPosting">
+
+  <!-- CARD PROFILE -->
+  <div class="row">
+    <div class="col">
+      <div class="card-profile">
+        <img class="img-profile" src="https://i.pinimg.com/564x/1d/3e/b9/1d3eb9f70bb9768090fc31e15a261fd4.jpg" alt="">
+        <div>
+          <div class="container-nome">
+            <h1>DogLabUFC!</h1>
+            <img src="../../../assets/badges/pata-dourada.svg" alt="">
+          </div>
+          <p class="pontuacao"> Parceiro desde 2022 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TITULO COLECAO DE BADGES! -->
+  <div class="row d-flex" style="margin: 20px 20px 0 20px;">
+    <div class="col-2 d-flex justify-content-center">
+      <img src="../../../assets/icon/star-badge.svg">
+    </div>
+    <div class="col d-flex justify-content-start">
+      <h4 class="p-0 m-0">Posts</h4>
+    </div>
+  </div>
+
+  <div class="row px-1 py-2 d-flex justify-content-around" style="margin: 20px 20px 0 20px;">
+
+    <div class="col-4 vertical-align-center">
+      <div class="card-badge p-0 mt-3" style="width: 140px; height: 140px;">
+        <img class="card-badge"
+          src="https://s2.glbimg.com/6fp73rolef_eKlgZXsiRHqURJK4=/0x0:1024x682/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/2/W/HteMf4RiyWpAeHc4JQAw/abrigo-caes-fortaleza.jpeg"
+          alt="" style="width: 140px; height: 140px;">
+      </div>
+    </div>
+    <div class="col-7">
+      <h4 class="p-0 m-0">Multirão de banho</h4>
+      <div class="row mt-2">
+        <div class="col-2">
+          <img class="" src="../../../assets/icon/calendar.svg">
+        </div>
+        <div class="col-2">
+          <img class="" src="../../../assets/icon/share.svg">
+        </div>
+      </div>
+      <span>Multirão do banho da UFC! Venha! Participe você e ajude na manutenção do lar dos cachorros mais fofos do
+        mundo!</span>
+    </div>
+
+  </div>
+
+  <div class="row px-1 py-2 d-flex justify-content-around" style="margin: 20px 20px 0 20px;">
+
+    <div class="col-4 vertical-align-center">
+      <div class="card-badge p-0 mt-3" style="width: 140px; height: 140px;">
+        <img class="card-badge"
+          src="https://media.gazetadopovo.com.br/viver-bem/2016/05/2p-guia-de-raes-abre-1200-pontos-1300-pontos-450-600x400-88437a80.jpg"
+          alt="" style="width: 140px; height: 140px;">
+      </div>
+    </div>
+    <div class="col-7">
+      <h4 class="p-0 m-0">Apadrinhe uma ração!</h4>
+      <div class="row mt-2">
+        <div class="col-2">
+          <img class="" src="../../../assets/icon/calendar.svg">
+        </div>
+        <div class="col-2">
+          <img class="" src="../../../assets/icon/share.svg">
+        </div>
+      </div>
+      <span>Comprometa-se com nossos animaizinhos! Doe Ração para o abrigo! Precisamos de sua ajuda!</span>
+    </div>
+
+  </div>
+
+  <div class="row px-1 py-2 d-flex justify-content-around" style="margin: 20px 20px 0 20px;">
+
+    <div class="col-4 vertical-align-center">
+      <div class="card-badge p-0 mt-3" style="width: 140px; height: 140px;">
+        <img class="card-badge"
+          src="https://colunaitalo.com.br/upload/ck/A%20RA%C3%87%C3%83O%20ANIMAIS%20-%20INTERNA.png" alt=""
+          style="width: 140px; height: 140px;">
+      </div>
+    </div>
+    <div class="col-7">
+      <h4 class="p-0 m-0">Doe Ração!!!</h4>
+      <div class="row mt-2">
+        <div class="col-2">
+          <img class="" src="../../../assets/icon/calendar.svg">
+        </div>
+        <div class="col-2">
+          <img class="" src="../../../assets/icon/share.svg">
+        </div>
+      </div>
+      <span>Comprometa-se com nossos animaizinhos! Doe Ração para o abrigo! Precisamos de sua ajuda!</span>
+    </div>
+
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="showNewPostButton()">
+    <ion-fab-button color="light" (click)="createNewPost()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>
+
+<ion-content *ngIf="isPosting">
+
+  <div class="container">
+    <div class="row py-3">
+      <div class="col">
+        <h2>Criar Post</h2>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col">
+        <label>Título da Postagem</label>
+        <input type="name" class="form-control" placeholder="Título">
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col">
+        <label>Data</label>
+        <input type="date" class="form-control">
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col">
+        <label>URL da Imagem</label>
+        <input type="name" class="form-control" placeholder="URL">
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col">
+        <label>Descrição</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col d-flex justify-content-end">
+        <button class="btn btn-danger btn-outline mx-3" (click)="closeNewPost()"> Cancelar </button>
+        <button class="btn btn-outline btn-primary mx-1"> Enviar </button>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+</ion-content>

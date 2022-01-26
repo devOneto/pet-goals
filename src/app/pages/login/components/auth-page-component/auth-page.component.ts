@@ -31,7 +31,10 @@ export class AuthPage implements OnInit {
         let user: any = data;
         if (this.login == user.email && this.password == user.password) {
           this.storage.setItem('authenticated', JSON.stringify(true));
-          this.router.navigateByUrl('tabs/feed');
+          this.storage.setItem('userType', JSON.stringify(user.userType));
+
+          if (user.userType == 'common') this.router.navigateByUrl('tabs/feed'); else this.router.navigateByUrl('tabs/shelter')
+
         } else { this.showErrorMessage = true }
       })
       .catch(console.log)
