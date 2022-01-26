@@ -14,9 +14,18 @@ export class RankingPage implements OnInit {
   constructor(private rankingService: RankingService) { }
 
   ngOnInit() {
-    this.rankingService.getRanking().toPromise()
-      .then(data => { this.ranking = data.users })
-      .catch(console.log)
+    this.loadData();
+  }
+
+  async loadData(): Promise<void> {
+    setTimeout(() => {
+      setTimeout(() => {
+        this.rankingService.getRanking().toPromise()
+        .then(data => {
+          this.ranking = data.users ;
+      }).catch(console.log);
+      }, 2000);
+    });
   }
 
 }

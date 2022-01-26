@@ -40,7 +40,7 @@
     // border:2px solid #ccc;
     border-radius: 50%;
     // margin-right: 5px;
-    
+
 }
 
 .com-func{
@@ -51,4 +51,8 @@
 .organization-name{
     font-size: 20px;
     font-family: 'Poppins';
+}
+
+ion-content{
+  font-family:'Poppins' !important;
 }

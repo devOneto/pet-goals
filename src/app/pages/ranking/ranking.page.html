@@ -2,61 +2,155 @@
 
 <ion-content>
 
-  <div class="container" *ngIf="this.ranking.length>0">
+  <div class="container" *ngIf="ranking.length > 0;else skeleton">
+    <div class="container" *ngIf="this.ranking.length > 0">
 
-    <div class="row">
-
-      <!-- TODO: Colocar a primeira insignia de cada usuário ao lado de seu nome. -->
-
-      <!-- 2o -->
-      <div class="col mt-3 align-center text-center">
-        <span>2o</span>
-        <img class="winners" src="{{this.ranking[1].urlImage}}">
-        <span class="podium-name">{{this.ranking[1].name}}</span> <br>
-        <span class="podium-points"> {{this.ranking[1].points * 21 }} </span>
-      </div>
-      <!-- 1o -->
-      <div class="col mt-3 align-center text-center">
-        <span>1o</span>
-        <img class="winners" src="{{this.ranking[0].urlImage}}">
-        <span class="podium-name">{{this.ranking[0].name}}</span> <br>
-        <span class="podium-points"> {{this.ranking[0].points * 21}} </span>
-      </div>
-      <!-- 3o -->
-      <div class="col mt-3 align-center text-center">
-        <span>3o</span>
-        <img class="winners" src="{{this.ranking[2].urlImage}}">
-        <span class="podium-name">{{this.ranking[2].name}}</span> <br>
-        <span class="podium-points"> {{this.ranking[2].points * 21}} </span>
-      </div>
-
-    </div>
-
-    <div class="container">
-
-      <div *ngFor="let user of this.ranking.slice(3,-1)" class="row pt-4">
-        <div class="col-1 p-0 text-center align-middle align-self-center">
-          <!-- TODO: Estilizar Colocacões -->
-          <span class="location align-center ">{{this.ranking.indexOf(user) + 1}}o</span>
+      <div class="row">
+        <!-- 2o -->
+        <div class="col mt-3 align-center text-center podio">
+          <img class="mx-2" src="../../../assets/winner2.svg">
+          <span class="podium-name">{{this.ranking[1].name}}</span> <br>
+          <span class="podium-points"> {{this.ranking[1].points * 21 }} </span>
         </div>
-        <div class="col">
-          <div class="colocation-card px-3" style="background-color: linear ;">
-            <div class="row">
-              <div class="col-10">
-                <img class="commom-guys my-3 mx-2" src="{{this.user.urlImage}}">
-                <span> {{this.user.name}} </span>
-              </div>
-              <div class="col-2 align-center align-self-center">
-                <span style="font-size: 24px; color: azure;"> {{this.user.points * 21}} </span>
+        <!-- 1o -->
+        <div class="col mt-3 align-center text-center podio">
+          <img class="mx-2" src="../../../assets/winner.svg">
+          <span class="podium-name">{{this.ranking[0].name}}</span> <br>
+          <span class="podium-points"> {{this.ranking[0].points * 21}} </span>
+        </div>
+        <!-- 3o -->
+        <div class="col mt-3 align-center text-center podio">
+          <img class="mx-2" src="../../../assets/winner3.svg">
+          <span class="podium-name">{{this.ranking[2].name}}</span> <br>
+          <span class="podium-points"> {{this.ranking[2].points * 21}} </span>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div *ngFor="let user of this.ranking.slice(3,-1)" class="row pt-4">
+          <div class="col-1 p-0 text-center align-middle align-self-center">
+            <span class="location align-center ">{{this.ranking.indexOf(user) + 1}}°</span>
+          </div>
+          <div class="col">
+            <div class="colocation-card px-3" style="background-color: linear ;">
+              <div class="row">
+                <div class="col-10">
+                  <img class="commom-guys my-3 mx-2" src="{{this.user.urlImage}}">
+                  <span> {{this.user.name}} </span>
+                </div>
+                <div class="col-2 align-center align-self-center">
+                  <span style="font-size: 24px; color: azure;"> {{this.user.points * 21}} </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
+
     </div>
-
-
   </div>
+
+  <ng-template #skeleton>
+      <div class="row">
+        <!-- 2o -->
+        <div class="col mt-3 align-center text-center">
+          <ion-avatar slot="start" class="mx-2">
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </ion-avatar>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+        </div>
+        <!-- 1o -->
+        <div class="col mt-3 align-center text-center">
+          <ion-avatar slot="start" class="mx-2">
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </ion-avatar>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+        </div>
+        <!-- 3o -->
+        <div class="col mt-3 align-center text-center">
+          <ion-avatar slot="start" class="mx-2">
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </ion-avatar>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="container">
+          <div class="col-1 p-0 text-center align-middle align-self-center">
+            <p>
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </p>
+          </div>
+          <div class="col">
+            <div class="colocation-card px-3" style="background-color: linear ;">
+              <div class="row">
+                <div class="col-10">
+                  <ion-avatar slot="start" class="mx-2">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </ion-avatar>
+                  <p>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </p>
+                </div>
+                <div class="col-2 align-center align-self-center">
+                  <p>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1 p-0 text-center align-middle align-self-center">
+            <p>
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </p>
+          </div>
+          <div class="col">
+            <div class="colocation-card px-3" style="background-color: linear ;">
+              <div class="row">
+                <div class="col-10">
+                  <ion-avatar slot="start" class="mx-2">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </ion-avatar>
+                  <p>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </p>
+                </div>
+                <div class="col-2 align-center align-self-center">
+                  <p>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+
+
+  </ng-template>
+
 
 </ion-content>
