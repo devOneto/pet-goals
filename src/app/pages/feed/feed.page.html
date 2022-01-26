@@ -33,9 +33,11 @@
   <ion-card *ngFor="let post of posts" class="pb-3" style="border-radius: 10px;">
 
     <ion-card-header class="card-header" style="background-color: #F4F4F4;">
-      <img class="profile-icon d-inline mr-5 d-inline"
-        src="https://i.pinimg.com/564x/1d/3e/b9/1d3eb9f70bb9768090fc31e15a261fd4.jpg" width="40px" height="40px">
-      <span class="d-inline organization-name">{{post.organization.name}}</span>
+      <div (click)="goToShelterProfile()">
+        <img class="profile-icon d-inline mr-5 d-inline"
+          src="https://i.pinimg.com/564x/1d/3e/b9/1d3eb9f70bb9768090fc31e15a261fd4.jpg" width="40px" height="40px">
+        <span class="d-inline organization-name">{{post.organization.name}}</span>
+      </div>
     </ion-card-header>
 
     <div class="img-block">
@@ -43,6 +45,11 @@
     </div>
 
     <ion-card-content>
+      <h1 class="p-0 m-0 mb-1">
+        <strong>
+          {{post.title}}
+        </strong>
+      </h1>
       {{post.description}}
     </ion-card-content>
 

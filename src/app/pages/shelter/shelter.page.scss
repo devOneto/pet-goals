@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+.card-profile{
+    height: 140px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-profile{
+    object-fit: contain;
+    height:100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.container-nome{
+    display:flex;
+    align-items: center;
+}
+
+.container-nome h1{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FC8721;
+    font-size: 20px;
+}
+
+.container-nome img{
+    margin: 0 0 0 5px;
+    width:30px;
+}
+
+.pontuacao{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #666666;
+    font-size: 22px;
+}
+
+.titulo-badges{
+    display: flex;
+    align-items: center;
+}
+
+.container-badges{
+    margin: 30px;
+}
+
+.titulo-badges h2{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.titulo-badges img{
+    height: 20px;
+    margin-right: 10px;
+    color: #666666;
+}
+
+.badges{
+    display:flex;
+    margin-top: 20px;
+    width:1000px
+}
+
+.card-badge{
+    background-color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 4px 10px #d8d8d8 !important;
+}
+
+.container-presenca{
+    margin: 30px;
+}
+
+.titulo-presenca{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-presenca h2{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.titulo-presenca img{
+    height: 20px;
+    margin-right: 10px;
+    color: #666666;
+}
+
+.card-evento{
+    margin:0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-evento img{
+    height: 60px;
+    margin-right: 10px;
+}
+
+.card-evento h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #021638;
+    margin:0;
+}
+
+.card-evento p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #021638;
+    opacity: 0.6;
+    margin:0;
+}
+
+.card-evento a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+ion-content{
+  font-family:'Poppins' !important;
+}

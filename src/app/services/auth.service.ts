@@ -28,7 +28,7 @@ export class AuthService {
       events: [],
       badges: [firstBadge],
       isFirstLogin: true,
-      userType: 'shelter'
+      userType: 'common'
     }
     return this._http.post(`${this.url}`, body);
   }

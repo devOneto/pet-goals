@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Profile } from 'src/app/models/profile.model';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-shelter',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShelterPage implements OnInit {
 
-  constructor() { }
+  storage: Storage;
+  isPosting = false;
+
+  constructor(private router: Router) {
+    this.storage = window.sessionStorage;
+  }
 
   ngOnInit() {
+  }
+
+  createNewPost() {
+    this.isPosting = true;
+  }
+
+  closeNewPost() {
+    this.isPosting = false;
+  }
+
+  showNewPostButton() {
+    return this.storage.getItem('userType') == '"shelter"';
+  }
+
+  exit() {
+    this.storage.clear();
+    this.router.navigateByUrl('')
   }
 
 }

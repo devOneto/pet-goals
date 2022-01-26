@@ -97,4 +97,8 @@ export class FeedPage implements OnInit {
     this.profileService.updateFirstLoginStatus()
   }
 
+  goToShelterProfile() {
+    this.router.navigateByUrl('/tabs/shelter')
+  }
+
 }

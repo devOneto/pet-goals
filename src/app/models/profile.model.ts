@@ -1,5 +1,6 @@
 import { Badge } from "./badge.model";
 import { Event } from "./event.model";
+import { Post } from "./post.model";
 
 export interface Profile {
   id: number,
@@ -13,5 +14,6 @@ export interface Profile {
   likes: number,
   events: Event[],
   badges: Badge[],
+  posts: Post[]
   isFirstLogin: boolean
 }
