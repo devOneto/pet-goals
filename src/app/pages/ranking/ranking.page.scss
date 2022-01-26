@@ -16,18 +16,18 @@
 .colocation-card{
     background: rgb(252,135,33);
     background: linear-gradient(90deg, rgba(252,135,33,1) 0%, rgba(255,198,54,1) 100%);
-    border-radius: 10px;
     color: white;
 }
 
 .commom-guys{
     width:70px;
-    height:60px;
+    height:70px;
     border-radius: 50%;
 }
 
 .location{
-    font: 16px bold;
+    font-size: 20px;
+    color: #5C6972;
 }
 
 .border{
@@ -38,4 +38,13 @@
     border-radius: 50%;
     width: 200px;
     height: 100px;
+}
+
+ion-content{
+  font-family: Poppins !important;
+}
+
+.podio img {
+  width: 90px;
+  padding-bottom: 10px;
 }
